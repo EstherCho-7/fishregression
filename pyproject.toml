@@ -1,6 +1,6 @@
 [project]
 name = "fishregression"
-version = "0.2.1"
+version = "0.2.2"
 description = "Default template for PDM package"
 authors = [
     {name = "EstherCho-7", email = "dkgkqm777@gmail.com"},
@@ -30,3 +30,6 @@ test=[
 
 [tool.pdm]
 distribution = true 
+
+[tool.pytest.ini_options]
+pythonpath=["src"]
