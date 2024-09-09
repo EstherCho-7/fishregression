@@ -13,7 +13,7 @@ def lr_api():
         'length': l,
     }
 
-    response = requests.get('http://localhost:8001/get_weight', params=params, headers=headers)    
+    response = requests.get('http://localhost:8001/weight', params=params, headers=headers)    
     j = response.json()
     r = j.get("weight")
     return r
