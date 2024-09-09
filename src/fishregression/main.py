@@ -28,10 +28,10 @@ def predict(length: float):
     Returns:
         weight (float): 물고기 무게 (g)
     """
-   fish_model=get_model()
-   weight=fish_model.predict([[length**2, length]])[0]
-
-   return {
+    fish_model=get_model()
+    weight=fish_model.predict([[length**2, length]])[0]
+    
+    return {
             "length": length,
             "weight": weight
            }
