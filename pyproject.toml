@@ -15,8 +15,7 @@ readme = "README.md"
 license = {text = "MIT"}
 
 [project.scripts]
-pp="fishregression.cli:predict"
-gmp="fishregression.model.manager:get_model_path"
+ppp="fishregression.main:get_model_path"
 
 [tool.pdm.dev-dependencies]
 note=[
