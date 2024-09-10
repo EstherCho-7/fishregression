@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 import pickle
 import os
+from fishregression.model.manager import get_model_path
 
 app=FastAPI()
 
@@ -10,14 +11,14 @@ app=FastAPI()
 # 4. 기존 KNeighborsClassifier API 도커 RUN (8002)
 # 5. cli 프로그램 생성 -> input으로 길이 받기 -> (3) 호출 -> 결과(빙어, 도미) 출력
 
-def get_model_path():
-    import os
-    dir_name=os.path.dirname(__file__)
-    model_path=os.path.join(dir_name, "model1.pkl")
+#def get_model_path():
+#    import os
+#    dir_name=os.path.dirname(__file__)
+#    model_path=os.path.join(dir_name, "model1.pkl")
     
-    print(model_path)
+#    print(model_path)
 
-    return model_path
+#    return model_path
                       
 def get_model():
     path=get_model_path()
