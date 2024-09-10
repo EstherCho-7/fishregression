@@ -1,1 +1,1 @@
-recursive-include *.pkl
+recursive-include src *.pkl
