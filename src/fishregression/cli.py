@@ -3,8 +3,7 @@ import requests
 
 app = FastAPI()
 
-def lr_api():
-    def lr_api(l):
+def lr_api(l):
     headers = {
         'accept': 'application/json',
     }
@@ -35,14 +34,11 @@ def knn_api(l,w):
 
 @app.get("/predict")
 def predict():
-    length =3
-
-    neighbor = 5
-
+    length=float(input("물고기의 길이를 입력: "))
     # weight 예측 선형회귀 API 호출
     weight = lr_api(length)
     
     # 물고기 분류 API 호출
-    fish_class = knn_api(length, weight, neighbor)
+    fish_class = knn_api(length, weight)
 
     print(f"length:{length} 물고기는 weight:{weight} 으로 예측되며 종류는 {fish_class}입니다") 
